@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Ayah By Ayah, Quran, iOS, mobile, application">
+        <meta name="description" content="Ayah By Ayah is (yet another) Qur'an app for iOS. It's elegant, fast and optimised for a great user experience.">
+        
+    <title>Ayah By Ayah - Choose a Surah, Choose an Ayah, Press Play</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#fb882c">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- TODO: Schema.org, Twitter card, OG -->
+    <meta name="apple-itunes-app" content="app-id=545100717">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+<body>
+
+
+    <script>
+        /* Js dependent animations*/
+        document.write(`<style>.scroll-apparence {
+            opacity: 0;
+            -webkit-transition: -webkit-transform .8s ease-out;
+            -ms-transition: -ms-transform .8s ease-out;
+            transition: transform .8s ease-out;
+        }
+
+
+        .appear-from-bottom {
+            -ms-transform: translate(0px, 200px); /* IE 9 */
+            -webkit-transform: translate(0px, 200px); /* Safari */
+            transform: translate(0px, 200px);
+        }
+        .appear-from-left {
+            -ms-transform: translate(-200px, 0px); /* IE 9 */
+            -webkit-transform: translate(-200px, 0px); /* Safari */
+            transform: translate(-200px, 0px);
+        }
+        .appear-from-right {
+            right: -200px;
+        }</style>`);
+    </script>
+    
+    <section id="hero" class="progressive-bg-image">
+    <!-- Progressive load of bg img -->
+    <noscript><img class="full-absolute" src="img/background.jpg"></noscript>
+    <img class="hidden thumbnail" src="img/background_mini.jpg"> <!-- TODO: b64 -->
+    <img class="full-bg-image hidden" src="img/background.jpg">
+    <canvas class="full-absolute progressive-img-load-canvas"></canvas>
+    
+    <!-- ===== -->
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 logo">
+                    <a href="/index.html"><img src="img/logo.png" data-rjs="3"></a>
+                </div>
+                <nav class="col-lg-7 menu col-lg-offset-1 col-md-6 col-md-offset-2 col-sm-8 col-xs-12"><!-- hidden-xs">-->
+                    <ul>
+                        <li><a href="mailto:support@ayahbyayah.com" target="blank">Contact</a></li>
+                        <!--<li><a href="/faq.html">FAQ</a></li>-->
+                        <!--<li><a href="/contrib.html">Contribute</a></li>-->
+                        <!--<li><a href="/updates.html">Updates</a></li>-->
+                        <li><a href="http://itunes.apple.com/gb/app/ayah-by-ayah/id545100717?ls=1&mt=8" target="blank">Download</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="row">
+    <div class="col-lg-6 col-md-7 col-lg-offset-1 col-xs-12 intro">
+        <h1>Ayah By Ayah is a simple, intuitive and elegant Qur'an app.</h1>
+        <h2>Umm Salamah رضي الله عنها was asked about the recitation of the Rasool of Allah صلى الله عليه وسلم‎ so she said, "He used to pause in his recitation, Ayah by Ayah" (Ahmad, Abu Dawud, At-Tirmidhi)</h2>
+        <a href="http://itunes.apple.com/gb/app/ayah-by-ayah/id545100717?ls=1&mt=8" target="_blank"><img src="img/appstore-button.png" data-rjs="3"></a>
+    </div>
+    <div class="col-lg-5 col-md-5  col-xs-12 phone">
+        <img src="img/heroImage.png" data-rjs="3">
+    </div>
+</div>
+    </div>
+</section>
+    <section id="comments-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 section-description">
+                    <h2>
+                        Search
+                    </h2>
+                    <p>
+                        Intuitive and fast search by Surah, Ayah or page in multiple languages.
+                    </p>
+                </div>
+                <div class="col-sm-6 iphone-image scroll-apparence appear-from-bottom">
+                    <img src="img/search.png" data-rjs="3">
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section id="lists-section">
+        <div class="container">
+            <div class="row bottom-separator">
+                <div class="col-sm-5 col-sm-offset-1 col-sm-push-5 section-description">
+                    <h2>
+                         Bookmarks
+                    </h2>
+                    <p>
+                        Keep track of all your favourite Ayahs and your reading.
+                    </p>
+                </div>
+                <div class="col-sm-4 col-sm-offset-1 col-sm-pull-6 iphone-image scroll-apparence appear-from-bottom">
+                    <img src="img/bookmarks.png" data-rjs="3">
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="reader-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 col-sm-offset-1 col-sm-push-7 section-description">
+                    <h2>
+                        Themes
+                    </h2>
+                    <p>
+                        Change from Sepia, Night, Day and Gray themes.
+                    </p>
+                </div>
+
+                <div class="col-sm-8 col-sm-offset-1 col-sm-pull-4 iphone-image scroll-apparence appear-from-left">
+                    <img src="img/themes.png" data-rjs="3">
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="features-section">
+        <div class="container">
+            
+            <div class="row">
+                <h2 class="header-text text-center">Features</h2>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="icon-free"></i>
+                        </div>
+                        <h4>Free</h4>
+                        <p>Ayah By Ayah is entirely free of cost and ads.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="icon-speed"></i>
+                        </div>
+                        <h4>Fast</h4>
+                        <p>Optimised to load and render Ayahs smoothly.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="icon-easy"></i>
+                        </div>
+                        <h4>Simple & Intuitive</h4>
+                        <p>Provides an intuitive and attractive UI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials-section" class="parallax">
+        <div class="container">
+            <div class="row">
+                <h2 class="header-text text-center">What people think</h2>
+                <div class="col-sm-10 col-sm-offset-1 testimonial-list">
+                    
+                    <div role="tabpanel">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="tab1">
+	                            <div class="testimonial-text">
+                                    <p>
+                                        "Masha'Allah just wanted to say I really do love this app it's simple and exactly what I was looking for as sometimes you want to quickly go over a particular ayah that you find difficult. Have had the app for a while now and it is very practical and helps with perfecting my reading. Also having the English translation is great. I have just found out from reading the spec about the landscape mode so another bonus! 
+
+JazaakumAllah khair. May Allah reward you for your efforts."<br>
+                                        <span>AppStore Review</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="tab2">
+                                <div class="testimonial-text">
+	                                <p>
+                                        "جزاكم الله خيرا علي مجهودكم الطيب وأسأل الله سبحانه أن يجزل لكم العطاء والأجر"<br>
+                                        <span>AppStore Review</span>
+                                    </p>                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="tab3">
+                                <div class="testimonial-text">
+                                    <p>
+                                        "جزاكم الله خير
+This app makes me want to read Quran more and more. Extremely helpful for learners. Each ayah is read with excellent timing so it's easy to learn and recite. Thank you so much for a great app, may Allah reward you tremendously. Ameen"<br>
+                                         <span>AppStore Review</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="tab4">
+                                <div class="testimonial-text">
+                                    <p>
+                                        "A fantastic app which not only helps you to see how an Ayah should be pronounced correctly but also gives you the meaning! The simple yet effective design allows you to navigate very easily which saves a lot of time."<br>
+                                        <span>AppStore Review</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="tab5">
+                                <div class="testimonial-text">
+                                    <p>
+                                        "A very good & much needed app.
+Having the beautiful recitation of Sheikh Husary R.A is perfect for such an app.
+
+Insha'allah will help with my tajweed."<br>
+                                        <span>AppStore Review</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="tab6">
+                                <div class="testimonial-text">
+                                    <p>
+                                        "I am really happy to have this app.. I can't express my feelings in words to say you thanks.. May Allah live you people long and keep using all of you for His Deen e Islam..You people are really blessed ones from Allah for His umma."<br>
+                                        <span>AppStore Review</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div role="tabpanel" class="tab-pane fade" id="tab7">
+                                <div class="testimonial-text">
+                                    <p>
+                                       "I have tried a few apps to help with learning the Quran and this has got to be the best one, has been a invaluable tool, thank you and may Allah bless you for your time and effort."<br>
+                                        <span>AppStore Review</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div role="tabpanel" class="tab-pane fade" id="tab8">
+                                <div class="testimonial-text">
+                                    <p>
+                                       "This app is great its just what i was looking for easy and simple and you dont need to pay for any in-app purchases thanks."<br>
+                                        <span>AppStore Review</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane fade" id="tab9">
+                                <div class="testimonial-text">
+                                    <p>
+                                       "A couple of years ago I used this app to memorise 3 juz. I want to memorise the Quran again. This was the the best app."<br>
+                                        <span>Review</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane fade" id="tab10">
+                                <div class="testimonial-text">
+                                    <p>
+                                       "Masha Allah and Jazakumallahu Khayran."<br>
+                                        <span>AppStore Review</span>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab"></a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab"></a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab"></a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab"></a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab"></a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab6" aria-controls="tab6" role="tab" data-toggle="tab"></a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab7" aria-controls="tab7" role="tab" data-toggle="tab"></a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab8" aria-controls="tab8" role="tab" data-toggle="tab"></a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab9" aria-controls="tab9" role="tab" data-toggle="tab"></a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab10" aria-controls="tab10" role="tab" data-toggle="tab"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-img"></div>
+    </section>
+
+    <footer>
+    <div class="container">
+        <div class="row text-center">
+            <p class="links">
+                <a href="http://itunes.apple.com/gb/app/ayah-by-ayah/id545100717?ls=1&mt=8">Appstore</a><!-- - <a href="">Github</a>--> - <a href="mailto:support@ayahbyayah.com">Contact</a>
+            </p>
+            <p>Made with <strong>Du'as</strong> in Birmingham. Copyright 2018 <a href="https://github.com/tsucres">Adnan Chughtai</a>.</p>
+        </div>
+    </div>
+    
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+
+        
+        <script type="text/javascript" src="js/retina.min.js"></script>
+        <script type="text/javascript" src="js/progressive-bg.js"></script>
+        <script src="js/parallax-background.min.js"></script>
+        <script type="text/javascript">
+            // https://code.tutsplus.com/tutorials/a-simple-parallax-scrolling-technique--net-27641
+            $(document).ready(function(){
+                $('.parallax').parallaxBackground({
+                  'image': '.parallax-img'
+                });
+
+                listsSection = $("#lists-section");
+                commentSectionEl = $("#comments-section");
+                readerSectionEl = $("#reader-section");
+                $(window).scroll(function(){
+                    var windowScrollTop = $(this).scrollTop();
+                    var windowHeight = $(this).height();
+                    if(windowScrollTop > listsSection.position().top - 0.8*windowHeight){
+                        $("#lists-section").find(".appear-from-bottom").each(
+                            function() {
+                                $(this).animate({opacity:1},700);
+                                $(this).removeClass("appear-from-bottom");
+                            }
+                        );
+                    }
+                    if(windowScrollTop > commentSectionEl.position().top - 0.8*windowHeight){
+                        $("#comments-section").find(".appear-from-bottom").each(
+                            function() {
+                                $(this).animate({opacity:1},700);
+                                $(this).removeClass("appear-from-bottom");
+                            }
+                        );
+                    }
+                    if(windowScrollTop > readerSectionEl.position().top - 0.8*windowHeight){
+                        $("#reader-section").find(".appear-from-left").each(
+                            function() {
+                                $(this).animate({opacity:1},700);
+                                $(this).removeClass("appear-from-left");
+                            }
+                        );
+                    }
+                });
+                $(window).scroll();
+            });
+
+ var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2219873-10']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+            </script>
+</body>
+</html>
